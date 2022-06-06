@@ -1,0 +1,8 @@
+C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/rtl/MD5_core.v {1 {vlog -work work -stats=none C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/rtl/MD5_core.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MD5_core
+
+Top level modules:
+	MD5_core
+
+} {} {}}

@@ -38,7 +38,7 @@ wire [31:0] b1_c [1:64];
 wire [31:0] b1_d [1:64];
 wire [511:0] b1_m [1:64];
 
-reg [511:0] message_padded = 0;
+reg [511:0] message_padded;
 
 parameter [31:0] a_initial = 32'h01234567;
 parameter [31:0] b_initial = 32'h89abcdef;

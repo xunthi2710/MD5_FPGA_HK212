@@ -1,0 +1,20 @@
+Fitter Status : Failed - Mon Jun  6 23:36:54 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : MD5_core
+Top-level Entity Name : MD5_core
+Family : Cyclone V
+Device : 5CGXFC9E7F35C8
+Timing Models : Final
+Logic utilization (in ALMs) : 625 / 113,560 ( < 1 % )
+Total registers : 811
+Total pins : 645 / 616 ( 105 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 12,492,800 ( 0 % )
+Total RAM Blocks : 0 / 1,220 ( 0 % )
+Total DSP Blocks : 0 / 342 ( 0 % )
+Total HSSI RX PCSs : 0 / 12 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 12 ( 0 % )
+Total HSSI TX PCSs : 0 / 12 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 12 ( 0 % )
+Total PLLs : 0 / 20 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

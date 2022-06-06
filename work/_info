@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/xuant/Documents/GitHub/AES_128_DoAn
+vMD5_core
+!s110 1654536453
+!i10b 1
+!s100 b5JW^Ddf7AUY^aH390@hc1
+Iz;LRBlDccXC[7PHD4H4Yi2
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212
+w1654536447
+8C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/rtl/MD5_core.v
+FC:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/rtl/MD5_core.v
+L0 9
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1654536452.000000
+!s107 C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/rtl/MD5_core.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/rtl/MD5_core.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@m@d5_core
+vtb_MD5_core
+!s110 1654536638
+!i10b 1
+!s100 HKWfgA4jZBF]A1iamYXQZ3
+I3k]0SKQm`DSZz2iW`TO^03
+R0
+R1
+w1654536633
+8C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/tb/tb_MD5_core.v
+FC:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/tb/tb_MD5_core.v
+L0 11
+R2
+r1
+!s85 0
+31
+!s108 1654536638.000000
+!s107 C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/tb/tb_MD5_core.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/xuant/Documents/GitHub/MD5_FPGA_HK212/src/tb/tb_MD5_core.v|
+!i113 1
+R3
+R4
+ntb_@m@d5_core
