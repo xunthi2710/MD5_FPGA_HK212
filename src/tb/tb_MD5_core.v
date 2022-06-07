@@ -22,18 +22,18 @@ parameter CLK_PERIOD = 2 * CLK_HALF_PERIOD;
 //----------------------------------------------------------------
 // Register and Wire declarations.
 //----------------------------------------------------------------
-reg [31 : 0] cycle_ctr;
-reg [31 : 0] error_ctr;
-reg [31 : 0] tc_ctr;
-reg          tb_monitor;
+reg [31:0] cycle_ctr;
+reg [31:0] error_ctr;
+reg [31:0] tc_ctr;
+reg tb_monitor;
 
-reg           tb_clk;
-reg           tb_reset_n;
-reg           tb_init;
-reg           tb_next;
-wire          tb_ready;
-reg [511 : 0]  tb_block;
-wire [127 : 0] tb_digest;
+reg tb_clk;
+reg tb_reset_n;
+reg tb_init;
+reg tb_next;
+wire tb_ready;
+reg [511:0]tb_block;
+wire [127:0] tb_digest;
 
 
 //----------------------------------------------------------------
@@ -369,10 +369,12 @@ endtask // tc4
 //----------------------------------------------------------------
 // tc5()
 // Single, block input representing the string: "They are deterministic".
+// Single, block input representing the string: "Vu Thi Huyen Trang".
 //----------------------------------------------------------------
 task tc5;
 begin
     $display("*** TC5 - Single byte string 'They are deterministic' input started.");
+    // $display("*** TC5 - Single byte string 'Vu Thi Huyen Trang' input started.");
     tc_ctr = tc_ctr + 1;
     tb_monitor = 0;
 
@@ -384,17 +386,25 @@ begin
     #(2 * CLK_PERIOD);
 
     $display("-- Asserting next.");
-    tb_block = {32'h54686579, 32'h20617265, 32'h20646574, 32'h65726d69,
-                32'h6e697374, 32'h69638000, 32'h00000000, 32'h00000000,
+    
+    tb_block = {32'h79656854, 32'h65726120, 32'h74656420, 32'h696d7265,
+                32'h7473696e, 32'h00806369, 32'h00000000, 32'h00000000,
                 32'h00000000, 32'h00000000, 32'h00000000, 32'h00000000,
-                32'h00000000, 32'h00000000, 32'h00000000, 32'h000000b0};
+                32'h00000000, 32'h00000000, 32'h000000b0, 32'h00000000};
+    
+    /*
+    tb_block = {32'h54207556, 32'h48206968, 32'h6e657975, 32'h61725420,
+                32'h0080676e, 32'h00000000, 32'h00000000, 32'h00000000,
+                32'h00000000, 32'h00000000, 32'h00000000, 32'h00000000,
+                32'h00000000, 32'h00000000, 32'h00000000, 32'h00000090};
+    */
 
     tb_next = 1'h1;
     #(2 * CLK_PERIOD);
     tb_next = 1'h0;
     wait_ready();
     #(2 * CLK_PERIOD);
-
+    
     if (tb_digest == 128'h23db6982caef9e9152f1a5b2589e6ca3)
     $display("** Correct result for TC5.");
     else
@@ -402,6 +412,16 @@ begin
         $display("** Incorrect result for TC5. Expected 0x23db6982caef9e9152f1a5b2589e6ca3, Got 0x%032x", tb_digest);
         error_ctr = error_ctr + 1;
     end
+
+    /*
+    if (tb_digest == 128'h4738f2ed2e732d7ce9f0f5336603c793)
+    $display("** Correct result for TC5.");
+    else
+    begin
+        $display("** Incorrect result for TC5. Expected 0x4738f2ed2e732d7ce9f0f5336603c793, Got 0x%032x", tb_digest);
+        error_ctr = error_ctr + 1;
+    end
+    */
     $display("*** TC5 completed.");
     $display("");
 
@@ -426,8 +446,8 @@ begin : MD5_core_test
     tc1();
     tc2();
     tc3();
-    tc4();
     tc5();
+    tc4();
 
     display_test_result();
     $display("");
